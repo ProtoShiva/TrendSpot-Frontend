@@ -287,11 +287,7 @@ const Navbar = () => {
                         {user?.firstName} {user?.lastName}
                       </h3>
                       <p className="text-[10px] text-white bg-emerald-500 w-[27%] h-4 mt-[20px] flex justify-center mr-8 rounded-lg">
-                        {isAdmin === "Admin" ||
-                        isAdmin === "subscriber" ||
-                        isAdmin === "influencer"
-                          ? "Premium Plan"
-                          : "Free Plan"}
+                        {isSubscribed || isAdmin ? "Premium Plan" : "Free Plan"}
                       </p>
                     </div>
                     <div>
